@@ -1,4 +1,4 @@
 <?php
 echo "test";
-print("Tu me fais chier");
+print("Tu me fais ch***");
 ?>
