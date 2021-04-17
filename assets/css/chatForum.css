@@ -1,0 +1,194 @@
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}
+
+.contennue{
+    margin: 20px auto 20px auto;
+    width: 80%;
+}
+
+h2{
+    font-size: 30px;
+}
+
+.pseudoVous{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.chat{
+    width: 100%;
+    border: 4mm ridge #32a1ce;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.lesMessages{
+    height: 400px;
+    overflow: auto;
+}
+
+.blockMessageAutre{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+}
+
+.contenneurMessage{
+    width: 50%;
+    padding: 5px;
+}
+
+.contennueMessageAutre{
+    padding: 10px 20px 10px 20px;
+    background-color: #C0C0C0;
+    color: black;
+    border-radius: 30px;
+    float: right;
+}
+
+.pseudo{
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 30px;
+}
+
+.leMessage {
+    display: block;
+    padding-left: 8px;
+}
+
+.date{
+    padding-top: 5px;
+    font-size: 13px;
+    float: right;
+}
+
+.blockMessageVous{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.contennueMessageVous{
+    padding: 10px 20px 10px 20px;
+    background-color: #1E90FF;
+    border-radius: 30px;
+    color: white;
+    float: left;
+}
+
+.trait{
+    padding-top: 5px;
+    width: 100%;
+    border-bottom: solid;
+}
+
+.blockReponse{
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+form{
+    width:100%;
+}
+
+.contenneurForm{
+    display: flex;
+    width: 100%;
+}
+.contennueMessage{
+    width: 100%;
+}
+
+.reponse{
+    width: 100%;
+    padding-left: 5px;
+}
+
+textarea{
+    resize: none;
+    display: inline-block;
+}
+
+.contennueBtEnvoyer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btEnvoyer{
+    font-weight: bold;
+    height: 50px;
+    width: 105px;
+    margin-left: 20px;
+}
+
+
+
+
+
+/***** Permet d'afficher l'heure du message dans un tooltip *****/
+.contennueMessageAutre, .contennueMessageVous{
+    position: relative;
+    display: inline-block;
+}
+
+.contennueMessageAutre .heure,  .contennueMessageVous .heureV2{
+    visibility: hidden;
+    width: 50px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    transform: translate(-5px, 0);
+}
+
+.contennueMessageAutre .heure {
+    bottom: 40%;
+    right: 100%;
+    margin-left: -60px;
+}
+
+.contennueMessageVous .heureV2 {
+    bottom: 40%;
+    left: 100%;
+    margin-left: 9px;
+}
+
+.contennueMessageAutre .heure::after, .contennueMessageVous .heureV2::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.contennueMessageAutre .heure::after {
+    left: 50px;
+    transform: rotate(0.75turn);
+}
+
+.contennueMessageVous .heureV2::after {
+    right: 50px;
+    transform: rotate(0.25turn);
+}
+
+.contennueMessageAutre:hover .heure, .contennueMessageVous:hover .heureV2 {
+    visibility: visible;
+    opacity: 1;
+}
+/****************************************************************/
+
+
+
+
+

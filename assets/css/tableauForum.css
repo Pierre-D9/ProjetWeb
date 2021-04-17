@@ -1,0 +1,199 @@
+body{
+    min-width: 850px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    color: green;
+}
+
+.contenneur{
+    margin: 20px auto 20px auto;
+    width: 80%;
+}
+
+form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ajouterUnCours{
+    padding: 5px 0 5px 5px;
+}
+
+.btCreer{
+    border-radius: 30px;
+    border: solid #FF8C00;
+    color: white;
+    background-color: #FF8C00;
+    padding: 8px 8px 8px 8px;
+    font-size: 18px;
+    width: 150px;
+}
+
+.choixTypeCours{
+    padding: 5px 10px 5px 10px;
+}
+
+select{
+    font-size: 18px;
+    padding: 7px; /* Ajoute un peu d'espace*/
+    margin: 0; /* Enlève les espaces par défaut */
+    padding-right: 3em; /* accomode la taille avec l'élément d'avant */
+    border: solid #FF8C00;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #FF8C00;
+    color: white;
+    border-radius: 5px;
+}
+
+.listeDeroulante {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.listeDeroulante::before,
+.listeDeroulante::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.listeDeroulante::after { /* Flèche vers le bas */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.4em;
+    top: 50%; margin-top: -.5em;
+    color: white;
+}
+
+.listeDeroulante::before { /* Bloc de la flèche */
+    width: 2.3em;
+    right: 0; top: 0; bottom: 0;
+}
+
+.listeDeroulante-barre::before { /* La barre */
+    top: 0; bottom: 0;
+    border-left: 1px solid rgba(0,0,0,.1);
+}
+
+select:focus{
+    outline: none;
+}
+
+.rechercher{
+    padding: 5px 5px 5px 0;
+}
+
+.barreDeRecherche{
+    border-radius: 30px;
+    background: url("../Image/loupe.png") no-repeat 10px #fff;
+    background-position-y: 10px;
+    width: 320px;
+    padding: 8px 4px 8px 30px;
+    font-size: 18px;
+}
+
+.barreDeRecherche:focus {
+    outline: none;
+}
+
+.leTableau{
+    margin-top: 40px;
+}
+
+table{
+    width:100%;
+    table-layout: fixed;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.enteteTableau{
+    background-color: #EFEFEF;
+}
+
+.bodyTableau{
+    height:350px;
+    overflow-x:auto;
+    margin-top: 0;
+}
+
+th{
+    padding: 20px 10px 20px 10px;
+    font-size: 25px;
+    color: #0000ff;
+    text-transform: uppercase;
+}
+
+td{
+    padding: 15px 10px 15px 10px;
+    vertical-align:middle;
+    font-size: 20px;
+    color: #3782c8;
+    border-bottom: solid 2px #EFEFEF;
+    word-wrap: break-word;
+}
+
+/* 1er td */
+td:first-child{
+    border-left: solid 2px #EFEFEF;
+}
+
+td:nth-child(2){
+    width: 165px;
+}
+
+
+/* 2, 3 et 4ème td */
+td:nth-child(3), td:nth-child(4){
+    width: 150px;
+}
+
+
+/* 2ème th */
+th:nth-child(2){
+    width: 200px;
+}
+
+th:nth-child(3){
+    width: 120px;
+}
+
+/* 3ème th */
+th:nth-child(4){
+    width: 175px;
+}
+
+
+
+/* Pour customiser la scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+
+/* Nouvelles règles si la fenêtre fait au plus 700px de large */
+@media screen and (max-width: 700px)
+{
+    .contenneur, .contenneurTitre{
+        margin: 0;
+        width: 80%;
+    }
+
+}
