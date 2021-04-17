@@ -130,7 +130,6 @@ input:focus, select:focus{
 {
     .contenneur, .contenneurTitre{
         margin: 0;
-        margin-right: 0;
         width: 80%;
     }
 

@@ -36,7 +36,7 @@ $(document).ready(function(){
 
     $('select').on("change", function () {
         var valeur = $(this).val();
-        if(valeur !== 1){
+        if(valeur != 1){
             $(this).css("color","black");
         }else{
             $(this).css("color","grey");
