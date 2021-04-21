@@ -5,35 +5,53 @@
     <link rel="stylesheet" href="../assets/css/ajoutForum.css"/>
 </head>
 <body>
+
+<?php
+$lesTypesDeCours = array();
+include_once('../_controllers/chargementClasses.php');
+
+$forumMySQL = new ForumMySQL();
+$rs = $forumMySQL->rechercherLesTypesDeCours();
+while($row = $rs->fetch()) {
+    $unTypeDeCours = new TypeCours($row[0], $row[1]);
+    $lesTypesDeCours[] = $unTypeDeCours;
+}
+?>
     <div class="contenneurTitre">
         <h1>Ajouter un forum</h1>
     </div>
 
     <div class="contenneur">
-        <form>
-            <div class="partieSujet">
-                    <label for="nom">Nom générale : </label>
-                    <input id="nom" name="nom" type="text" class="inputSujet" placeholder="Entrez un nom" />
+        <form action="../_controllers/ajouterUnForum.php" method="post">
+            <div class="rentrerUtil">
+                <div class="partieSujet">
+                    <label for="titreSujet">Titre du sujet : </label>
+                    <input type="text" id="titreSujet" name="titreSujet" class="titreSujet" required />
+                </div>
+
+                <div class="partieTypeCours">
+                    <label for="typeCours">Type de cours : </label>
+                    <span class="listeDeroulante listeDeroulante-barre">
+                        <select name="typeCours" id="typeCours" class="typeCours" required>
+                            <option value="">Choisissez un type de cours</option>
+                            <?php
+                            foreach($lesTypesDeCours as $unTypeDeCours){
+                                echo "<option value='".$unTypeDeCours->idType."'>".$unTypeDeCours->typeC."</option>";
+                            }
+                            ?>
+                        </select>
+                    </span>
+                </div>
+
+                <div class="partieQuestion">
+                    <label for="question">Question : </label>
+                    <textarea name="question" id="question" class="question" rows="7" required ></textarea>
+                </div>
             </div>
-            <div class="partieQuestion">
-                <label for="question">Question : </label>
-                <input id="question" name="question" type="text" class="inputQuestion" placeholder="Entrez une question" />
-            </div>
-            <div class="partieTypeCours">
-                <label for="typeCours">Type de cours : </label>
-                <span class="listeDeroulante listeDeroulante-barre">
-                    <select id="typeCours" class="typeCours">
-                        <option value="1">Choisissez un cours</option>
-                        <option value="2">The Godfather</option>
-                        <option value="3">Pulp Fiction</option>
-                        <option value="4">The Good</option>
-                        <option value="5">12 Angry Men</option>
-                    </select>
-                </span>
-            </div>
+
             <div class="lesBoutons">
                 <input type="button" value="Annuler" class="btAnnuler">
-                <input type="button" value="Valider" class="btValider">
+                <input type="submit" value="Valider" class="btValider">
             </div>
         </form>
     </div>

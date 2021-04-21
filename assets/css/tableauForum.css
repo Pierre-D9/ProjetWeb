@@ -83,7 +83,7 @@ select{
     border-left: 1px solid rgba(0,0,0,.1);
 }
 
-select:focus{
+select:focus, .barreDeRecherche:focus, .btCreer:focus{
     outline: none;
 }
 
@@ -98,10 +98,6 @@ select:focus{
     width: 320px;
     padding: 8px 4px 8px 30px;
     font-size: 18px;
-}
-
-.barreDeRecherche:focus {
-    outline: none;
 }
 
 .leTableau{

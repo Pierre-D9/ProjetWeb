@@ -9,25 +9,29 @@ h1{
 }
 
 .contenneur{
-    padding-top: 40px;
+    padding-top: 25px;
     margin: 20px auto 20px auto;
-    width: 60%;
+    width: 80%;
 }
 
-.partieSujet, .partieQuestion, .partieTypeCours{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
+.rentrerUtil{
+    margin: 20px auto 20px auto;
+    width: 80%;
+}
+
+.partieSujet, .partieTypeCours, .partieQuestion{
+    padding-top: 15px;
 }
 
 label{
     font-size: 25px;
     width: 200px;
+    display: block;
+    padding-bottom: 5px;
 }
 
 select{
-    width: 290px;
+    width: 320px;
     font-size: 18px;
     padding: 7px; /* Ajoute un peu d'espace*/
     margin: 0; /* Enlève les espaces par défaut */
@@ -75,53 +79,46 @@ select{
     border-left: 1px solid rgba(0,0,0,.1);
 }
 
-select option[value="1"]{
+select option{
+    color: black;
+}
+
+select option[value=""]{
     color: grey;
 }
 
-.inputQuestion, .inputSujet{
+.titreSujet, .question{
     border-radius: 10px;
-    width: 270px;
+    width: 100%;
     padding: 8px 4px 8px 10px;
     font-size: 18px;
     border: solid silver;
 }
 
-input:focus, select:focus{
+textarea{
+    resize: none;
+}
+
+input:focus, select:focus, textarea:focus{
     border: solid black;
     outline: none;
 }
 
 .lesBoutons{
-    padding-top: 40px;
+    padding-top: 30px;
     display: flex;
     justify-content: space-between;
 }
 
-.ajouterUnCours{
-    padding: 5px 0 5px 5px;
-}
-
-.btAnnuler{
+.btAnnuler, .btValider{
     border-radius: 30px;
     border: solid #FF8C00;
     color: white;
     background-color: #FF8C00;
     padding: 8px 8px 8px 8px;
-    font-size: 15px;
-    width: 125px;
+    font-size: 18px;
+    width: 150px;
 }
-
-.btValider{
-    border-radius: 30px;
-    border: solid #FF8C00;
-    color: white;
-    background-color: #FF8C00;
-    padding: 8px 8px 8px 8px;
-    font-size: 15px;
-    width: 125px;
-}
-
 
 
 

@@ -5,6 +5,18 @@
     <link rel="stylesheet" href="../assets/css/tableauForum.css" />
 </head>
 <body>
+<?php
+$lesTypesDeCours = array();
+
+include_once('../_controllers/chargementClasses.php');
+
+$forumMySQL = new ForumMySQL();
+$rs = $forumMySQL->rechercherLesTypesDeCours();
+while($row = $rs->fetch()) {
+    $unTypeDeCours = new TypeCours($row[0], $row[1]);
+    $lesTypesDeCours[] = $unTypeDeCours;
+}
+?>
 <div class="contenneurTitre">
     <h1>Les forums</h1>
 </div>
@@ -12,16 +24,17 @@
 <div class="contenneur">
     <form>
         <div class ="ajouterUnCours">
-            <button class="btCreer">Créer un forum</button>
+           <input type="button" class="btCreer" value="Créer un forum" />
         </div>
         <div class="choixTypeCours">
             <span class="listeDeroulante listeDeroulante-barre">
                 <select>
-                    <option>Type de cours</option>
-                    <option>The Godfather</option>
-                    <option>Pulp Fiction</option>
-                    <option>The Good, the Bad and the Ugly</option>
-                    <option>12 Angry Men</option>
+                    <option value="">Type de cours</option>
+                    <?php
+                    foreach($lesTypesDeCours as $unTypeDeCours){
+                        echo "<option value='".$unTypeDeCours->idType."'>".$unTypeDeCours->typeC."</option>";
+                    }
+                    ?>
                 </select>
             </span>
         </div>
@@ -50,6 +63,7 @@
                         <td class="tdForum1">type de cours</td>
                         <td class="tdForum1">012345678912</td>
                         <td class="tdForum1">09/04/2021</td>
+
                     </tr>
                     <tr class="trBody" id="2">
                         <td class="tdForum2">Ceci est un nom de forum</td>
@@ -93,7 +107,13 @@
         </div>
 </div>
 
+<div class="test">
+
+</div>
+
+<!-- Les scripts js -->
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/tableauForum.js"></script>
+
 </body>
 </html>
