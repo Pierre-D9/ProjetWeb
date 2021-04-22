@@ -85,7 +85,8 @@ function remplirTableauAvecBarreDeRecherche(json, nomSaisie, typeCoursChoisi){
         });
     }).on("click", function () {
         var id = $(this).attr('id');
-        window.location.href = 'chatForum.php';
+        url = '../_controllers/afficherUnForum.php?idForum='+id;
+        window.location.href = url;
     });
 }
 

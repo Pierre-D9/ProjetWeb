@@ -13,10 +13,29 @@ h2{
     font-size: 30px;
 }
 
+.questionEtDate{
+    display: flex;
+    justify-content: space-between;
+    width: 102%;
+}
+
+.question{
+    padding-right: 10px;
+}
+
 .pseudoVous{
     font-weight: bold;
     font-size: 20px;
 }
+
+.dateForum{
+    padding-left: 10px;
+    display: grid; /* contexte sur le parent */
+    place-items: flex-end;
+    font-weight: bold;
+    font-size:20px;
+}
+
 
 .chat{
     width: 100%;

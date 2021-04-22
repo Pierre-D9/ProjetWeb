@@ -4,13 +4,33 @@
     <title>Page chat forum</title>
     <link rel="stylesheet" href="../assets/css/chatForum.css"/>
 </head>
+<?php
+session_start();
+if(isset($_SESSION['leForum'])){
+    $leForum = $_SESSION['leForum'];
+    $idForum = $leForum[0];
+    $nom = $leForum[1];
+    $question = $leForum[2];
+    $dateF = $leForum[3];
+    $createur = $leForum[4];
+    $idTypeCours = $leForum[5];
+    $vous = "FarahB";
+
+?>
 <body>
-    <h1>Forum</h1>
+    <h1 id="<?php echo $vous;?>">Forum</h1>
 
     <div class="contennue">
         <div class="enteteChat">
-            <h2>Nom forum</h2>
-            <p><span class="pseudoVous">pseudo </span>La question</p>
+            <?php echo "<h2 id='".$idForum."'>".$nom."</h2>"; ?>
+            <div class="questionEtDate">
+                <div class="question">
+                    <p><span class="pseudoVous"><?php echo $createur; ?> </span> <?php echo $question; ?></p>
+                </div>
+                <div class="dateForum">
+                    <p><?php echo $dateF; ?></p>
+                </div>
+            </div>
         </div>
 
 
@@ -87,14 +107,20 @@
                             <textarea name="reponse" class="reponse" placeholder="Votre message" rows="5" ></textarea>
                         </div>
                         <div class="contennueBtEnvoyer">
-                            <input type="submit" value="Envoyer 🔥" class="btEnvoyer" id="btEnvoyer"/>
+                            <input type="button" value="Envoyer 🔥" class="btEnvoyer" id="btEnvoyer"/>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+    <br />
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/chatForum.js"></script>
 </body>
+<?php
+}else{
+    echo "Erreur de récupération des données";
+}
+?>
 </html>
