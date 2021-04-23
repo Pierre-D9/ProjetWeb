@@ -7,7 +7,7 @@ include_once("chargementClasses.php");
 $idForum = $_REQUEST['idForum'];
 $reponse = $_REQUEST['message'];
 $auteur = $_REQUEST['auteur'];
-$dateR = $_REQUEST['dateR'];
+$dateR = date("Y-m-d h-i-s");
 
 //Création de la connexion avec la base de donnée en créant l'objet
 $forumMySQL = new ForumMySQL();

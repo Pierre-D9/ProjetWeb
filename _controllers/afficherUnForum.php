@@ -12,6 +12,8 @@ $forumMySQL = new ForumMySQL();
 //Récupération des forums
 $rs = $forumMySQL->voirUnForum($idForum);
 
+$isUpdate = $forumMySQL->augmenterLeNombreDeVue($idForum);
+
 
 //Remplissage dans un tableau, un tableau sous forme de clé valeur pour chaque forum
 $leForum = $rs->fetch();

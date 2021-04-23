@@ -29,10 +29,10 @@ while($row = $rs->fetch()) {
         <div class="choixTypeCours">
             <span class="listeDeroulante listeDeroulante-barre">
                 <select>
-                    <option value="">Type de cours</option>
+                    <option value="">Tous les types de cours</option>
                     <?php
                     foreach($lesTypesDeCours as $unTypeDeCours){
-                        echo "<option value='".$unTypeDeCours->idType."'>".$unTypeDeCours->typeC."</option>";
+                        echo "<option value='".$unTypeDeCours->typeC."'>".$unTypeDeCours->typeC."</option>";
                     }
                     ?>
                 </select>

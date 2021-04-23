@@ -25,18 +25,21 @@ class ForumMySQL {
 
     function ajouterUnForum($nom, $question, $dateF, $pseudo, $idTypeCours){
         $isInsert = false;
-        $stmt = $this->laConnexion->getDbh()->prepare("INSERT INTO `forum` (`nom`, `questionPose`, `dateF`, `createur`, `idTypeCours`)".
-                                                            " VALUES (:nom, :question, :dateF, :pseudo, :idTypeCours);");
+        $dernierId = 0;
+        $stmt = $this->laConnexion->getDbh()->prepare("INSERT INTO `forum` (`nom`, `questionPose`, `dateF`, `createur`, `idTypeCours`, `nbrVue`)".
+                                                            " VALUES (:nom, :question, :dateF, :pseudo, :idTypeCours, 0);");
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':question', $question);
         $stmt->bindParam(':dateF', $dateF);
         $stmt->bindParam(':pseudo', $pseudo);
         $stmt->bindParam(':idTypeCours', $idTypeCours);
 
+
         if($stmt->execute()){
             $isInsert = true;
+            $dernierId = $this->laConnexion->getDbh()->lastInsertId();
         }
-        return $isInsert;
+        return $dernierId;
     }
 
     function voirLesForums(){
@@ -52,9 +55,9 @@ class ForumMySQL {
     }
 
     function ajouterUneReponse($dateR, $reponse, $pseudoUtil, $idForum){
+        $isInsert = false;
         $stmt = $this->laConnexion->getDbh()->prepare("INSERT INTO `reponse` (`dateR`, `reponse`, `pseudoUtil`, `idForum`)".
-                                                            " VALUES (:dateR, :reponse, :pseudoUtil, :idForum);");
-        $stmt->bindParam(':dateR', $dateR);
+                                                            " VALUES (now(), :reponse, :pseudoUtil, :idForum);");
         $stmt->bindParam(':reponse', $reponse);
         $stmt->bindParam(':pseudoUtil', $pseudoUtil);
         $stmt->bindParam(':idForum', $idForum);
@@ -88,6 +91,18 @@ class ForumMySQL {
             $this->laConnexion->afficherErreurSQL("Problème lors de la recherche des réponses", $stmt);
         }
         return $stmt;
+    }
+
+    function augmenterLeNombreDeVue($idForum){
+        $isUpdate = false;
+        $stmt = $this->laConnexion->getDbh()->prepare("UPDATE forum".
+                                                            " SET nbrVue = nbrVue + 1".
+                                                            " WHERE idForum = :idForum;");
+        $stmt->bindParam(':idForum', $idForum);
+        if($stmt->execute()){
+            $isUpdate = true;
+        }
+        return $isUpdate;
     }
 
 }
