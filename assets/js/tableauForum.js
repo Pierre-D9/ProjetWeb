@@ -1,4 +1,5 @@
-rechercherTousLesForums();
+var test = rechercherTousLesForums();
+console.log(test);
 
 function rechercherTousLesForums() {
     //Récupère tous les forums sous format json depuis le script getForum
@@ -18,6 +19,7 @@ function rechercherTousLesForums() {
             var nomSaisie = $('input.barreDeRecherche').val();
             remplirTableauAvecBarreDeRecherche(json, nomSaisie, typeDeCours);
         });
+        return nomSaisie;
     });
 }
 
