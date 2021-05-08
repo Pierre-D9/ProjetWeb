@@ -142,6 +142,11 @@ td:first-child{
     border-left: solid 2px #EFEFEF;
 }
 
+/* Dernier td */
+td:last-child{
+    border-right: solid 2px #EFEFEF;
+}
+
 td:nth-child(2){
     width: 165px;
 }
