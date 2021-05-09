@@ -1,0 +1,91 @@
+body{
+    min-width: 630px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}
+
+.contenneur{
+    padding-top: 25px;
+    margin: 20px auto 20px auto;
+    width: 80%;
+}
+
+.rentrerUtil{
+    margin: 20px auto 20px auto;
+    width: 80%;
+}
+
+.partieSujet, .partieTypeCours, .partieQuestion{
+    padding-top: 15px;
+}
+
+label{
+    font-size: 25px;
+    width: 200px;
+    display: block;
+    padding-bottom: 5px;
+}
+
+select{
+    width: 320px;
+    font-size: 18px;
+    padding: 7px; /* Ajoute un peu d'espace*/
+    margin: 0; /* Enlève les espaces par défaut */
+    padding-left: 10px;
+    padding-right: 17px; /* accomode la taille avec l'élément d'avant */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+    border: solid silver;
+}
+
+
+.titreSujet, .question{
+    border-radius: 10px;
+    width: 100%;
+    padding: 8px 4px 8px 10px;
+    font-size: 18px;
+    border: solid silver;
+}
+
+
+
+input:focus, select:focus, textarea:focus{
+    border: solid black;
+    outline: none;
+}
+
+.lesBoutons{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btAnnuler, .btValider{
+    border-radius: 30px;
+    border: solid #FF8C00;
+    color: white;
+    background-color: #FF8C00;
+    padding: 8px 8px 8px 8px;
+    font-size: 18px;
+    width: 150px;
+}
+
+
+
+/* Nouvelles règles si la fenêtre fait au plus 700px de large */
+@media screen and (max-width: 800px)
+{
+    .contenneur, .contenneurTitre{
+        margin: 0;
+        width: 80%;
+    }
+
+}
