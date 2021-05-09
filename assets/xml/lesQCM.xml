@@ -1,0 +1,21 @@
+<lesQcm>
+    <qcm idQcm="1">
+        <nomQcm>un nom</nomQcm>
+        <lesQuestion>
+            <question num="1">
+                <question>Est-ce que t'es chaud ? Pour le projet ???</question>
+                <lesReponses>
+                    <reponse idReponse="1" value="true">Oui</reponse>
+                    <reponse idReponse="2" value="false">Non</reponse>
+                </lesReponses>
+            </question>
+            <question num="2">
+                <question>We are going to succeed ???</question>
+                <lesReponses>
+                    <reponse idReponse="1" value="false">No im a little shit!</reponse>
+                    <reponse idReponse="2" value="true">Of course we are the best</reponse>
+                </lesReponses>
+            </question>
+        </lesQuestion>
+    </qcm>
+</lesQcm>

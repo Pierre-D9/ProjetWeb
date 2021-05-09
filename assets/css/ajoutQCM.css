@@ -1,0 +1,131 @@
+body{
+    min-width: 630px;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: green;
+}
+
+.contenneur{
+    margin: 20px auto 20px auto;
+    width: 60%;
+}
+
+.rentrerAdmin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 25px;
+    width: 200px;
+    padding-top: 5px;
+}
+
+.partieNom, .partieTypeCours{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+select{
+    width: 320px;
+    font-size: 18px;
+    padding: 7px; /* Ajoute un peu d'espace*/
+    margin: 0; /* Enlève les espaces par défaut */
+    padding-left: 10px;
+    padding-right: 17px; /* accomode la taille avec l'élément d'avant */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+    color: grey;
+    border-radius: 10px;
+    border: solid silver;
+}
+
+.listeDeroulante {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.listeDeroulante::before,
+.listeDeroulante::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+}
+
+.listeDeroulante::after { /* Flèche vers le bas */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 1.4em;
+    top: 50%; margin-top: -.5em;
+    color: black;
+}
+
+.listeDeroulante::before { /* Bloc de la flèche */
+    width: 2.3em;
+    right: 0; top: 0; bottom: 0;
+}
+
+.listeDeroulante-barre::before { /* La barre */
+    top: 0; bottom: 0;
+    border-left: 1px solid rgba(0,0,0,.1);
+}
+
+select option{
+    color: black;
+}
+
+select option[value=""]{
+    color: grey;
+}
+
+.nomQCM{
+    border-radius: 10px;
+    padding: 8px 4px 8px 10px;
+    font-size: 18px;
+    border: solid silver;
+    width: 295px;
+}
+
+input:focus, select:focus{
+    border: solid black;
+    outline: none;
+}
+
+.lesBoutons{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btAnnuler, .btSuivant{
+    border-radius: 30px;
+    border: solid #FF8C00;
+    color: white;
+    background-color: #FF8C00;
+    padding: 8px 8px 8px 8px;
+    font-size: 18px;
+    width: 150px;
+}
+
+
+
+/* Nouvelles règles si la fenêtre fait au plus 700px de large */
+@media screen and (max-width: 800px)
+{
+    .contenneur, .contenneurTitre{
+        margin: 0;
+        width: 80%;
+    }
+
+}
