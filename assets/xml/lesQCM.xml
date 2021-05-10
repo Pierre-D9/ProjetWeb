@@ -3,6 +3,7 @@
     <qcm idQcm="1">
         <nomQcm>un nom</nomQcm>
         <typeDeCours>5</typeDeCours>
+        <pseudo>NicolasM</pseudo>
         <lesQuestions>
             <question num="1">
                 <libele>Est-ce que t'es chaud ? Pour le projet ???</libele>
@@ -14,11 +15,10 @@
             <question num="2">
                 <libele>We are going to succeed ???</libele>
                 <lesReponses>
-                    <reponse idReponse="1" value="false">No im a little shit!</reponse>
+                    <reponse idReponse="1" value="false">No im not good!</reponse>
                     <reponse idReponse="2" value="true">Of course we are the best</reponse>
                 </lesReponses>
             </question>
         </lesQuestions>
     </qcm>
-    
-<qcm idQCM="3"><nomQcm>Le nom</nomQcm><typeDeCours>13</typeDeCours><lesQuestions><question num="1"><question>Question 1</question><reponse idReponse="1" value="faux">R&#xE9;ponse 1</reponse><reponse idReponse="2" value="vraie">R&#xE9;ponse 2</reponse><reponse idReponse="3" value="faux">R&#xE9;ponse 3</reponse></question><question num="2"><question>Question 2</question><reponse idReponse="1" value="vraie">R&#xE9;ponse 1</reponse><reponse idReponse="2" value="faux">R&#xE9;ponse 2</reponse></question></lesQuestions></qcm></lesQcm>
+</lesQcm>

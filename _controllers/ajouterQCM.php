@@ -10,7 +10,7 @@ $numQuestion = $_REQUEST['numQuestion'];
 echo $question;
 
 //Vérification d'existence du tableau qcm dans la session
-if(isset($_SESSION['grandTabQCM'])) {
+if(isset($_SESSION['grandTabQCM'])&& $_SESSION['grandTabQCM']!= null) {
 
     //Récupération du gran tableau
     $grandTabQCM = $_SESSION['grandTabQCM'];
@@ -37,6 +37,8 @@ if(isset($_SESSION['grandTabQCM'])) {
     $nomQCM = $grandTabQCM['nomQCM'];
     $typeCours = $grandTabQCM['typeCours'];
 
+    $pseudo = "NicolasM";
+
 
 
     //Ouverture du fichier xml en écriture
@@ -50,6 +52,7 @@ if(isset($_SESSION['grandTabQCM'])) {
     $unQCM->setAttribute('idQCM', $numQCM);
     $nomDuQCM = $xml->createElement('nomQcm', $nomQCM);
     $typeDeCours = $xml->createElement('typeDeCours', $typeCours);
+    $pseudoXML = $xml->createElement('pseudo', $pseudo);
     $lesQuestions = $xml->createElement("lesQuestions");
 
     foreach($grandTabQCM['lesQuestion'] as $uneQuestion){
@@ -75,6 +78,7 @@ if(isset($_SESSION['grandTabQCM'])) {
 
     $unQCM->appendChild($nomDuQCM);
     $unQCM->appendChild($typeDeCours);
+    $unQCM->appendChild($pseudoXML);
     $unQCM->appendChild($lesQuestions);
     $lesQCM->appendChild($unQCM);
 
