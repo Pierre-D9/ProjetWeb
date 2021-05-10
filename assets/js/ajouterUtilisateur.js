@@ -15,7 +15,6 @@ $(document).ready(function(){
         });
 
     });
-
     $("input.btAnnuler").on("click", function (){
         window.location.href = 'tableauUtilisateur.php';
     });
