@@ -40,8 +40,8 @@
                     <td class="tdForum1"style =" padding: 10px 25px">nom1</td>
                     <td class="tdForum1" style =" padding: 10px 50px">prenom1</td>
                     <td class="tdForum1">nom1_prenom1@user.com</td>
-                    <td class="tdForum1" style =" padding: 10px 30px"><button class="btMS"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
-                    <td class="tdForum1"style =" padding: 10px 40px"><button class = "btMS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
+                    <td class="tdForum1" style =" padding: 10px 30px"><button class= "btM"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
+                    <td class="tdForum1"style =" padding: 10px 40px"><button class = "btS"  onClick="location.href='suprimerUnUtilisateur.php?pseudo';">supprimer</button></td>
 
                 </tr>
                 <tr class="trBody" id="2">
@@ -49,8 +49,8 @@
                     <td class="tdForum1">nom 2</td>
                     <td class="tdForum1">prenom 2</td>
                     <td class="tdForum1">nom2_prenom2@user.com</td>
-                    <td class="tdForum1"><button class="btMS"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
-                    <td class="tdForum1"><button class = "btMS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
+                    <td class="tdForum1"><button class="btM"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
+                    <td class="tdForum1"><button class = "btS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
 
                 </tr>
                 <tr class="trBody" id="3">
@@ -58,8 +58,8 @@
                     <td class="tdForum1">nom 3</td>
                     <td class="tdForum1">prenom 3</td>
                     <td class="tdForum1">nom3_prenom3@user.com</td>
-                    <td class="tdForum1"><button class="btMS"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
-                    <td class="tdForum1"><button class = "btMS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
+                    <td class="tdForum1"><button class="btM"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
+                    <td class="tdForum1"><button class = "btS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
 
                 </tr>
                 <tr class="trBody" id="4">
@@ -67,8 +67,8 @@
                     <td class="tdForum1">nom 4</td>
                     <td class="tdForum1">prenom 4</td>
                     <td class="tdForum1">nom4_prenom4@user.com</td>
-                    <td class="tdForum1"><button class="btMS"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
-                    <td class="tdForum1"><button class = "btMS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
+                    <td class="tdForum1"><button class="btM"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
+                    <td class="tdForum1"><button class = "btS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
 
                 </tr>
                 <tr class="trBody" id="5">
@@ -76,8 +76,8 @@
                     <td class="tdForum1">nom 5</td>
                     <td class="tdForum1">prenom 5</td>
                     <td class="tdForum1">nom5_prenom5@user.com</td>
-                    <td class="tdForum1"><button class="btMS"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
-                    <td class="tdForum1"><button class = "btMS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
+                    <td class="tdForum1"><button class="btM"  onClick="location.href='ModifierUtilisateur.php?pseudo';">modifier</button></td>
+                    <td class="tdForum1"><button class = "btS"  onClick="location.href='SuprimerUtilisateur.php?pseudo';">supprimer</button></td>
 
                 </tr>
 

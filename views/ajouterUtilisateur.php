@@ -7,6 +7,7 @@
 <body>
 <?php
 include_once('../_controllers/chargementClasses.php');
+
 ?>
 <div class="contenneurTitre">
     <h1>Ajouter un utilisateur </h1>

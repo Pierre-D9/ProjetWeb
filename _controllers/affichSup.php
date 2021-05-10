@@ -20,13 +20,6 @@ $prenom = $lesutil[3];
 $mail = $lesutil[4];
 $typeUtil = $lesutil[5];
 
-
-//Remplissage dans un tableau, un tableau sous forme de clé valeur pour chaque forum
-while($row = $rs->fetch()) {
-    $uneLigne = array('id' => $row[0], 'nom' => $row[1],'typeCours' => $row[2], 'auteur' => $row[3], 'dateF' => $row[4]);
-    array_push($lesForumJson, $uneLigne);
-}
-
 //Forum envoyé en session
 
 $utilEnvoye = array($pseudo,$password, $nom,$prenom , $mail , $typeUtil );

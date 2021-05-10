@@ -30,6 +30,22 @@ class UtilisateurMySQL
 
     }
 
+    function supprimerUnUtilisateur($pseudo )
+    {
+        $isDeleted = false;
+        $dernierId =0 ;
+        $stmt = $this->laConnexion->getDbh()->prepare("DELETE FROM Utilisateur WHERE pseudo = :pseudo");
+
+        $stmt->bindParam(':pseudo', $pseudo);
+
+        if ($stmt ->execute()) {
+            $isDeleted = true;
+            $dernierId = $this->laConnexion->getDbh();
+        }
+        return $dernierId;
+
+    }
+
     function voirLesUtilisateurs()
     {
         $stmt = $this->laConnexion->getDbh()->prepare("SELECT pseudo, password, nom, prenom, mail FROM Utilisateur WHERE typeUtil = 0 ORDER BY nom ASC;");
@@ -61,7 +77,6 @@ class UtilisateurMySQL
             echo "edité";
             $dernierId = $this->laConnexion->getDbh();
         }
-
         return $dernierId;
     }
 

@@ -6,8 +6,39 @@ $(document).ready(function(){
         $.getJSON("../_controllers/getUtilisateurs.php", function (json) {
 
             remplirTableauAvecBarreDeRecherche(json);
+            $("input.btS").on("mouseover", function(){
+                //Lorsque le pointeur de la souris est sur le bouton
+                $(this).css({
+                    "background-color" : "white", //Change la couleur d'arrière en blanc
+                    "color" : "#FF8C00", //Change la couleur du texte en orange foncé
+                    "cursor" : "pointer" //Change l'aspect du pointeur
+                });
+            }).on("mouseleave",function () {
+                //Lorsque le pointeur de la souris n'est plus sur le bouton
+                $(this).css({
+                    "background-color": "#FF8C00", //Change la couleur d'arrière en blanc
+                    "color": "white", //Change la couleur du texte en orange foncé
+                }).on("click", function() {
+                    var r = confirm("utilisateur sera supprimé !! ")
+                    if (r == true)
+                    {
+                        var pseudo = $(this).attr('id').remove();
 
-            $("input.btMS").on("mouseover", function(){
+                    }
+                        });
+
+            })
+            $("tr").on("mouseover", function(){
+                $(this).css( "background-color" , "#FDF507"); //Change la couleur d'arrière en bleue
+                //Change l'aspect du pointeur
+
+            })
+            $("tr").on("mouseleave", function (){
+                $(this).css( "background-color" , "#E8F1FE");//Change la couleur d'arrière en blanc
+            });
+
+
+           $("input.btMS ").on("mouseover", function(){
                 //Lorsque le pointeur de la souris est sur le bouton
                 $(this).css({
                     "background-color" : "white", //Change la couleur d'arrière en blanc
@@ -26,7 +57,11 @@ $(document).ready(function(){
             });
 
         });
+
+
+
     }
+
     function remplirTableauAvecBarreDeRecherche(json){
         leTbody = $('tbody');
         leTbody.empty();
@@ -45,11 +80,11 @@ $(document).ready(function(){
 
             result += " <tr class='trBody' id='1'>";
             result +=" <td class='tdForum1'>"+pseudo+"</td>";
-            result += "<td class='tdForum1' style=' padding: 10px 25px'>"+nom+"</td>";
-            result += "<td class='tdForum1' style=' padding: 10px 50px'>"+prenom+"</td>";
+            result += "<td class='tdForum1' >"+nom+"</td>";
+            result += "<td class='tdForum1' >"+prenom+"</td>";
             result += "<td class='tdForum1'>"+mail+"</td>";
             result += "<td  style='padding: 10px 10px'><input type='button' class='btMS' id='"+pseudo+"' value='Modifier' /></td> ";
-            result += "<td style=' padding: 10px 40px'><input type='button' class='btMS' value='Supprimer'/></td>";
+            result += "<td style=' padding: 10px 40px'><input type='button' class='btS' id='"+pseudo+"' value='Supprimer'/></td>";
 
             result += " </tr>" ;
 
@@ -77,6 +112,4 @@ $(document).ready(function(){
         window.location.href = 'ajouterUtilisateur.php';
     });
 
-
-});
-
+})

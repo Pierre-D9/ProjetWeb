@@ -7,6 +7,7 @@
 <body>
 <?php
 include_once('../_controllers/chargementClasses.php');
+
 ?>
 <div class="contenneurTitre">
     <h1>modifier un utilisateur </h1>
@@ -17,13 +18,14 @@ include_once('../_controllers/chargementClasses.php');
         <div class ="rentrerUtil " >
             <div class="partieNom" style="  padding: 10px 10px; font-size: 20px;" >
         <label  for="ID"><b>ID :</b></label>
-                <input type="text" name="pseudo" >
+                <output type="text" name="pseudo" >
             </div>
         </div>
         <div class ="rentrerUtil , cadre " >
             <div class="partieNom" style="  padding: 10px 10px; font-size: 20px;" >
                 <label  for="nom"><b>Nom :</b></label>
-                <input  type = "text" name ="nom"  class="titreSujet"  "required />
+
+                <input  type = "text" name ="nom"  class="titreSujet" id = "nom" value = nom required />
             </div>
             <div class = "partiePrenom " style="  padding: 10px 10px; font-size: 20px;" >
                 <label   for="prenom" ><b>Prenom:</b></label>
@@ -48,7 +50,8 @@ include_once('../_controllers/chargementClasses.php');
 </div>
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
-<script src="../assets/js/ajouterUtilisateur.js"></script>
+<script src="../assets/js/ajouterUtilisateur.js"> var nom = $(this).attr('id');</script>
+
 
 </body>
 </html>

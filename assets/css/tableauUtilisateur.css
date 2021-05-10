@@ -45,6 +45,18 @@ form{
 
 }
 
+.btS{
+    border-radius: 30px;
+    border: solid #FF8C00;
+    color: white;
+    background-color: #FF8C00;
+    padding: 8px 8px 8px 8px;
+    font-size: 15px;
+    width: 100px;
+
+}
+
+
 
 
 select{
