@@ -212,7 +212,22 @@ $(document).ready(function(){
             "color" : "white", //Change la couleur du texte en blanc
         });
     }).on("click", function (){
-        window.location.href = 'tableauForum.php';
+        if(numQuestion>1){
+            var leTextarea = $('textarea').val();
+            var tabReponse = [];
+            var tabCheckBox = [];
+            for(var i = 0; i<nbrReponse; i++){
+                tabReponse.push($('input.reponse'+(i+1)).val());
+                if ($('input.CBreponse'+(i+1)).is(":checked")){
+                    tabCheckBox.push(1);
+                }else{
+                    tabCheckBox.push(0);
+                }
+            }
+            window.location.href = "../_controllers/ajouterQCM.php?question="+leTextarea+"&numQuestion="+numQuestion+"&lesReponses="+tabReponse+"&tabCheckBox="+tabCheckBox;
+        }else{
+            alert("Vous devez mettre au moin 2 question")
+        }
     });
 
 

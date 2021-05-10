@@ -26,7 +26,7 @@ if(isset($_SESSION['grandTabQCM'])) {
         "tabCheckBox" => $tabCheckBox
     );
 
-    //Création du QCM
+    //Ajout de la question au QCM
     $grandTabQCM['lesQuestion'][$numQuestion] = $tabQuestion;
 
     //Mise en session du tableau
