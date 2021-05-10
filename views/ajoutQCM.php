@@ -16,9 +16,9 @@ while($row = $rs->fetch()) {
     $unTypeDeCours = new TypeCours($row[0], $row[1]);
     $lesTypesDeCours[] = $unTypeDeCours;
 }
-if(isset($_SESSION["nomQCM"]) && isset($_SESSION["typeCours"])){
-    $nomQCM = $_SESSION["nomQCM"];
-    $typeCours = $_SESSION["typeCours"];
+if(isset($_SESSION["grandTabQCM"])){
+    $nomQCM = $_SESSION["grandTabQCM"]["nomQCM"];
+    $typeCours = $_SESSION["grandTabQCM"]["typeCours"];
 }else{
     $nomQCM = "";
     $typeCours = 0;

@@ -48,11 +48,6 @@ textarea{
     max-lines: 2;
 }
 
-textarea:focus, input:focus{
-    border: solid black;
-    outline: none;
-}
-
 textarea{
     resize: none;
 }
@@ -69,6 +64,12 @@ input[type="text"]{
     font-size: 18px;
     border: solid silver;
 }
+
+textarea:focus, input[type="text"]:focus{
+    border: solid black;
+    outline: none;
+}
+
 
 input[type="checkbox"]{
     margin: 10px 0 0 20px;

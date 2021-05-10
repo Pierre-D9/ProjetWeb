@@ -1,6 +1,8 @@
+<?xml version="1.0"?>
 <lesQcm>
     <qcm idQcm="1">
         <nomQcm>un nom</nomQcm>
+        <typeDeCours>5</typeDeCours>
         <lesQuestion>
             <question num="1">
                 <question>Est-ce que t'es chaud ? Pour le projet ???</question>
@@ -18,4 +20,4 @@
             </question>
         </lesQuestion>
     </qcm>
-</lesQcm>
+<qcm idQCM="2"><nomQcm>Le nom</nomQcm><typeDeCours>7</typeDeCours><question/></qcm></lesQcm>
