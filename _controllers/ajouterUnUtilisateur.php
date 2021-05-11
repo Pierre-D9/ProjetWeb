@@ -14,8 +14,9 @@ $UtilisateurMySQL  = new UtilisateurMySQL ();
 
 $UtiliId = $UtilisateurMySQL->ajouterUnUtilisateur($pseudo ,$password , $nom, $prenom, $mail);
 
-if($UtiliId !=0){
- header('location:../_controllers/afficherUnUtilisateur.php?pseudo='.$UtiliId);
- echo "<br/>l'utilisateur  a été ajouter  <br/>";
+if($UtiliId == "true"){
+ header('location:../views/tableauUtilisateur.php');
+}else{
+    echo "Problème lors de l'insertion de l'utilisateur";
 }
 ?>

@@ -1,0 +1,118 @@
+body{
+	margin:0px;
+	position: relative;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	background-color: orange;
+	padding: 20px;
+}
+.nomEtDeco{
+	padding-top: 7px;
+}
+
+.logo{
+	height: 40px;
+	width: 200px;
+}
+
+.btDeconnexion{
+	padding-top: 5px;
+}
+
+.btDeconnexion:hover{
+	color: red;
+	cursor: pointer;
+}
+
+.nomEtDeco{
+	display: flex;
+  	justify-content: space-between;
+}
+
+.nomPage{
+	font-size: 32px;
+	margin:0;
+}
+
+.nomAdmin{
+	font-size: 26px;
+	padding-right: 20px;
+	margin:0;
+}
+
+.deconnexion{
+	font-size: 26px;
+	margin: 0;
+}
+
+#image{
+  width: 100%;
+}
+
+h1{
+	text-align: center;
+	margin-top: 0px;
+}
+
+.lesBoutons{
+	display: flex;
+	justify-content: center;
+}
+
+.bouton{
+	border-radius: 30px;
+	background-color: orange;
+    border: solid orange;
+	color: white;
+	padding: 20px;
+	margin-left: 30px;
+	font-size: 20px;
+}
+
+.bouton:hover{
+	background-color: white;
+	color: orange;
+	cursor: pointer;
+}
+
+
+html{
+	height: 100%;
+}
+
+body{
+	position: relative;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.blockFooter {
+	padding: 0 50px 0 50px;
+	background-color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigationFooter{
+	display: flex;
+	list-style-type : none;
+}
+
+.lienFooter{
+	display : inline-block;
+	padding-right: 50px;
+	text-decoration:none;
+}
+
+
+
+
+
+

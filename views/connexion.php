@@ -25,12 +25,12 @@
               </div>
           </div>
           <div class="form-inner">
-              <form action="#" class="login">
+              <form action="../_controllers/gererConnexion.php" class="login" method="get">
                   <div class="field">
-                      <input type="text" placeholder="Pseudo" name="pseudoUtil" required>
+                      <input type="text" placeholder="Pseudo" name="pseudoUtil" id="pseudoUtil" required>
                   </div>
                   <div class="field">
-                      <input type="password" placeholder="Mot-de-passe" name="passwordUtil" required>
+                      <input type="password" placeholder="Mot-de-passe" name="passwordUtil" id="passwordUtil" required>
                   </div>
                   <div class="pass-link">
                       <a href="#">Mot de passe oublié?</a></div>

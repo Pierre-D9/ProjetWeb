@@ -28,10 +28,10 @@ $utilEnvoye = array($pseudo,$password, $nom,$prenom , $mail , $typeUtil );
 session_start();
 
 //On ajoute le forum dans la session
-$_SESSION['pseudo'] = $utilEnvoye;
+$_SESSION['utilAEnvoyer'] = $utilEnvoye;
 
 
 print_r($utilEnvoye);
 
-header('location:../views/ajouterUtilisateur.php');
+//header('location:../views/ajouterUtilisateur.php');
 ?>

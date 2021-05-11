@@ -12,8 +12,7 @@ class UtilisateurMySQL
 
     function ajouterUnUtilisateur($pseudo ,$password ,$nom, $prenom, $mail)
     {
-        $isInserted = false;
-        $dernierId =0 ;
+        $isInserted = "false";
         $stmt = $this->laConnexion->getDbh()->prepare("INSERT INTO `Utilisateur` (`pseudo`, `password` ,`nom`,`prenom`, `mail`, `typeUtil`)
                                                             VALUES (:pseudo ,:password ,:nom , :prenom , :mail , 0 )");
         $stmt->bindParam(':pseudo', $pseudo);
@@ -21,12 +20,10 @@ class UtilisateurMySQL
         $stmt ->bindParam(':nom', $nom);
         $stmt ->bindParam(':prenom', $prenom);
         $stmt ->bindParam(':mail', $mail);
-
-        if ($stmt ->execute()) {
-            $isInserted = true;
-            $dernierId = $this->laConnexion->getDbh()->lastInsertId();
+        if ($stmt ->execute() == 1) {
+            $isInserted = "true";
         }
-        return $dernierId;
+        return $isInserted;
 
     }
 
@@ -69,9 +66,9 @@ class UtilisateurMySQL
                                                 mail = :mail  
                                                 WHERE pseudo = :pseudo");
 
-        $stmt->bindParam(':nom', $_POST['$nom']);
-        $stmt->bindParam(':prenom', $_POST['prenom']);
-        $stmt->bindParam(':mail', $_POST['mail']);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':mail', $mail);
 
         if($stmt->execute()) {
             echo "edité";
@@ -92,6 +89,20 @@ class UtilisateurMySQL
         }
         return $stmt;
 
+    }
+
+    function verifierUtilisateur($pseudo, $password){
+        $stmt = $this->laConnexion->getDbh()->prepare("SELECT typeUtil, nom, prenom" .
+            " FROM Utilisateur".
+            " WHERE pseudo = :pseudo".
+            " AND password = :password");
+        $stmt->bindParam(':pseudo', $pseudo);
+        $stmt->bindParam(':password', $password);
+        $stmt->execute();
+        if ($stmt === false) {
+            $this->laConnexion->afficherErreurSQL("Utilisateur non trouvé ", $stmt);
+        }
+        return $stmt;
     }
 
 

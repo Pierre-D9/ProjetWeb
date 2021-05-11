@@ -5,7 +5,7 @@ $(document).ready(function(){
         //Récupère tous les forums sous format json depuis le script getForum
         $.getJSON("../_controllers/getUtilisateurs.php", function (json) {
 
-            remplirTableauAvecBarreDeRecherche(json);
+            remplirTableau(json);
             $("input.btS").on("mouseover", function(){
                 //Lorsque le pointeur de la souris est sur le bouton
                 $(this).css({
@@ -53,7 +53,7 @@ $(document).ready(function(){
                 });
             }).on("click", function() {
                 var pseudo = $(this).attr('id');
-                window.location.href = 'modifierUtilisateur.php?pseudo=' + pseudo;
+                window.location.href = '../_controllers/afficherUnUtilisateur.php?pseudo=' + pseudo;
             });
 
         });
@@ -62,7 +62,7 @@ $(document).ready(function(){
 
     }
 
-    function remplirTableauAvecBarreDeRecherche(json){
+    function remplirTableau(json){
         leTbody = $('tbody');
         leTbody.empty();
         var result = "";
