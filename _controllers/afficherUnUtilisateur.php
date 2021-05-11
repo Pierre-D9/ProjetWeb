@@ -8,7 +8,7 @@ $pseudo = $_GET['pseudo'];
 $UtilisateurMySQL = new UtilisateurMySQL();
 
 //Récupération des forums
-$rs = $UtilisateurMySQL->voirLesUtilisateurs();
+$rs = $UtilisateurMySQL->afficherUnUtilisateur($pseudo);
 
 
 //Remplissage dans un tableau, un tableau sous forme de clé valeur pour chaque forum

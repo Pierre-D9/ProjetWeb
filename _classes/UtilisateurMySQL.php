@@ -29,17 +29,11 @@ class UtilisateurMySQL
 
     function supprimerUnUtilisateur($pseudo )
     {
-        $isDeleted = false;
-        $dernierId =0 ;
         $stmt = $this->laConnexion->getDbh()->prepare("DELETE FROM Utilisateur WHERE pseudo = :pseudo");
 
         $stmt->bindParam(':pseudo', $pseudo);
 
-        if ($stmt ->execute()) {
-            $isDeleted = true;
-            $dernierId = $this->laConnexion->getDbh();
-        }
-        return $dernierId;
+        $stmt->execute();
 
     }
 
@@ -77,7 +71,7 @@ class UtilisateurMySQL
         return $dernierId;
     }
 
-    function AfficherUnUtilisateur($pseudo)
+    function afficherUnUtilisateur($pseudo)
     {
         $stmt = $this->laConnexion->getDbh()->prepare("SELECT pseudo ,nom, prenom, mail " .
             " FROM Utilisateur " .
@@ -88,7 +82,6 @@ class UtilisateurMySQL
             $this->laConnexion->afficherErreurSQL("Utilisateur non trouvé ", $stmt);
         }
         return $stmt;
-
     }
 
     function verifierUtilisateur($pseudo, $password){

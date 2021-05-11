@@ -18,16 +18,16 @@ $(document).ready(function(){
                 $(this).css({
                     "background-color": "#FF8C00", //Change la couleur d'arrière en blanc
                     "color": "white", //Change la couleur du texte en orange foncé
-                }).on("click", function() {
-                    var r = confirm("utilisateur sera supprimé !! ")
-                    if (r == true)
-                    {
-                        var pseudo = $(this).attr('id').remove();
+                });
+            }).on("click", function() {
+                var pseudo = $(this).attr('id');
+                if (confirm("Voulez-vous vraiment supprimer cette utilisateur : "+pseudo + " ?")){
+                    console.log(pseudo);
+                }else{
+                    console.log('pas nice');
+                }
+            });
 
-                    }
-                        });
-
-            })
             $("tr").on("mouseover", function(){
                 $(this).css( "background-color" , "#FDF507"); //Change la couleur d'arrière en bleue
                 //Change l'aspect du pointeur
@@ -38,7 +38,7 @@ $(document).ready(function(){
             });
 
 
-           $("input.btMS ").on("mouseover", function(){
+           $("input.btM").on("mouseover", function(){
                 //Lorsque le pointeur de la souris est sur le bouton
                 $(this).css({
                     "background-color" : "white", //Change la couleur d'arrière en blanc
@@ -83,8 +83,8 @@ $(document).ready(function(){
             result += "<td class='tdForum1' >"+nom+"</td>";
             result += "<td class='tdForum1' >"+prenom+"</td>";
             result += "<td class='tdForum1'>"+mail+"</td>";
-            result += "<td  style='padding: 10px 10px'><input type='button' class='btMS' id='"+pseudo+"' value='Modifier' /></td> ";
-            result += "<td style=' padding: 10px 40px'><input type='button' class='btS' id='"+pseudo+"' value='Supprimer'/></td>";
+            result += "<td  style='padding: 10px 10px'><input type='button' class='btM' id='"+pseudo+"' value='Modifier' /></td> ";
+            result += "<td style=' padding: 10px 40px'><input type='button' class='btS' id='"+pseudo+"' value='Supprimer' '/></td>";
 
             result += " </tr>" ;
 

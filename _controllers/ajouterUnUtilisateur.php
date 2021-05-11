@@ -6,8 +6,8 @@ include_once('chargementClasses.php');
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
-$pseudo = "$nom$prenom" ;
-$password = "$pseudo" ;
+$pseudo = $_POST['pseudo'];
+$password = $_POST['password'];
 
 
 $UtilisateurMySQL  = new UtilisateurMySQL ();

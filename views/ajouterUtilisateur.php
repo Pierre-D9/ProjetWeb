@@ -27,7 +27,17 @@ include_once('../_controllers/chargementClasses.php');
 
             <div class = "partieMail " style="  padding: 10px 10px;  font-size: 20px; " >
                 <label  for="email" ><b>Adresse mail:</b></label>
-                <input type = "text" name ="mail" id="mail" class="titreSujet"  required />
+                <input type = "email" name ="mail" id="mail" class="titreSujet"  required />
+            </div>
+
+            <div class = "partieMail " style="  padding: 10px 10px;  font-size: 20px; " >
+                <label  for="email" ><b>Pseudo:</b></label>
+                <input type = "text" name ="pseudo" id="pseudo" class="titreSujet"  required />
+            </div>
+
+            <div class = "partieMail " style="  padding: 10px 10px;  font-size: 20px; " >
+                <label  for="password" ><b>Mot de passe:</b></label>
+                <input type = "password" name ="password" id="password" class="titreSujet"  required />
             </div>
 
             <div class = " lesBoutons ">
