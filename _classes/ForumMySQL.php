@@ -44,9 +44,9 @@ class ForumMySQL {
 
     function voirLesForums(){
         $stmt = $this->laConnexion->getDbh()->prepare("SELECT idForum, nom, typeC, createur, dateF".
-                                                            " FROM forum INNER JOIN typecours".
-                                                            " ON forum.idTypeCours = typecours.idType".
-                                                            " ORDER BY nbrVue DESC, dateF, nom ASC");
+            " FROM forum INNER JOIN typecours".
+            " ON forum.idTypeCours = typecours.idType".
+            " ORDER BY nbrVue DESC, dateF, nom ASC");
         $stmt->execute();
         if ($stmt === false){
             $this->laConnexion->afficherErreurSQL("Problème lors de la recherche du type de cours", $stmt);
