@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Page forum</title>
-    <link rel="stylesheet" href="../assets/css/tableauQCM.css" />
+    <link rel="stylesheet" href="../assets/css/homeApprenant.css" />
     <link rel="icon" type="image/png" sizes="16*16" href="../assets/Image/WonlyColorV2.ico">
 </head>
 <body>
@@ -50,7 +50,7 @@ while($row = $rs->fetch()) {
 
 <!-- Les scripts js -->
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
-<script src="../assets/js/tableauQCM.js"></script>
+<script src="../assets/js/homeApprenant.js"></script>
 
 </body>
 </html>
