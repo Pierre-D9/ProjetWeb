@@ -1,7 +1,7 @@
 <?php
 $title = "Page QCM";
-$linkCSS = "tableauQCM";
-include("../_scripts/enteteAdmin.php");
+$linkCSS = "tableauQCMApprenant";
+include("../_scripts/enteteApprenant.php");
 
 $lesTypesDeCours = array();
 
@@ -20,9 +20,6 @@ while($row = $rs->fetch()) {
 
 <div class="contenneur">
     <form>
-        <div class ="ajouterUnQCM">
-           <input type="button" class="btCreer" value="Créer un QCM" />
-        </div>
         <div class="choixTypeCours">
             <span class="listeDeroulante listeDeroulante-barre">
                 <select>
@@ -43,12 +40,10 @@ while($row = $rs->fetch()) {
             <div class="enteteTableau">
                 <table>
                     <thead>
-                    <tr>
+                    <tr class="leTrEntete">
                         <th>Nom du QCM</th>
                         <th>Type de cours</th>
                         <th>Auteur</th>
-                        <th>Modifier</th>
-                        <th>Supprimer</th>
                     </tr>
                     </thead>
                 </table>
@@ -83,6 +78,6 @@ while($row = $rs->fetch()) {
 
 <!-- Les scripts js -->
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
-<script src="../assets/js/tableauQCM.js"></script>
+<script src="../assets/js/tableauQCMApprenant.js"></script>
 
 <?php include("../_scripts/footer.php"); ?>

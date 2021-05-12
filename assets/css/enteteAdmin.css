@@ -43,11 +43,11 @@ body{
     border-radius: 30px;
     background-color: green;
     border: solid green;
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 0;
+    margin-left: 20px;
     color: white;
-    padding: 5px;
-    font-size: 17px;
+    padding: 10px;
+    font-size: 19px;
 }
 
 .gererCours:hover, .gererQCM:hover, .gererUtil:hover{

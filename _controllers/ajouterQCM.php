@@ -37,7 +37,7 @@ if(isset($_SESSION['grandTabQCM'])&& $_SESSION['grandTabQCM']!= null) {
     $nomQCM = $grandTabQCM['nomQCM'];
     $typeCours = $grandTabQCM['typeCours'];
 
-    $pseudo = "NicolasM";
+    $pseudo = $_SESSION['pseudo'];
 
 
 
@@ -86,7 +86,7 @@ if(isset($_SESSION['grandTabQCM'])&& $_SESSION['grandTabQCM']!= null) {
     $_SESSION["grandTabQCM"] = null;
 }
 
-//header();
+header('location:../views/tableauQCM.php');
 
 
 

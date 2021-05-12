@@ -18,7 +18,7 @@ include("../_scripts/enteteAdmin.php");
         <div class="enteteTableau">
             <table>
                 <thead>
-                <tr>
+                <tr class="trEntete">
                     <th>ID</th>
                     <th>Nom </th>
                     <th>Prénom</th>

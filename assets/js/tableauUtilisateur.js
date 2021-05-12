@@ -34,14 +34,6 @@ $(document).ready(function(){
                 }
             });
 
-            $("tr").on("mouseover", function(){
-                $(this).css( "background-color" , "#FDF507"); //Change la couleur d'arrière en bleue
-                //Change l'aspect du pointeur
-
-            })
-            $("tr").on("mouseleave", function (){
-                $(this).css( "background-color" , "#E8F1FE");//Change la couleur d'arrière en blanc
-            });
 
 
            $("input.btM").on("mouseover", function(){

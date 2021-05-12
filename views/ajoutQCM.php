@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="../assets/css/ajoutQCM.css"/>
 </head>
 <body>
-
 <?php
+$title = "Page ajouter un QCM";
+$linkCSS = "ajoutQCM";
+include("../_scripts/enteteAdmin.php");
+
 $lesTypesDeCours = array();
 include_once('../_controllers/chargementClasses.php');
-session_start();
 $forumMySQL = new ForumMySQL();
 $rs = $forumMySQL->rechercherLesTypesDeCours();
 while($row = $rs->fetch()) {
@@ -64,5 +66,5 @@ if(isset($_SESSION["grandTabQCM"]) && $_SESSION["grandTabQCM"] != null){
 </div>
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/ajoutQCM.js"></script>
-</body>
-</html>
+
+<?php include("../_scripts/footer.php"); ?>

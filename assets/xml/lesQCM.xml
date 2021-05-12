@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <lesQcm>
-    <qcm idQcm="1">
+    <qcm idQCM="1">
         <nomQcm>un nom</nomQcm>
         <typeDeCours>5</typeDeCours>
         <pseudo>NicolasM</pseudo>
@@ -21,4 +21,4 @@
             </question>
         </lesQuestions>
     </qcm>
-</lesQcm>
+<qcm idQCM="2"><nomQcm>Le nom</nomQcm><typeDeCours>13</typeDeCours><pseudo>NicolasM</pseudo><lesQuestions><question num="1"><question>La premi&#xE8;re question</question><reponse idReponse="1" value="vraie">R&#xE9;ponse 1</reponse><reponse idReponse="2" value="faux">R&#xE9;ponse 2</reponse><reponse idReponse="3" value="faux">R&#xE9;ponse 3</reponse></question><question num="2"><question>La deuxi&#xE8;me question</question><reponse idReponse="1" value="vraie">R&#xE9;ponse 1</reponse><reponse idReponse="2" value="faux">R&#xE9;ponse 2</reponse><reponse idReponse="3" value="vraie">R&#xE9;ponse 3</reponse><reponse idReponse="4" value="faux">R&#xE9;ponse 4</reponse></question><question num="3"><question>3 &#xE8;me et derni&#xE8;re question</question><reponse idReponse="1" value="vraie">R&#xE9;ponse 1</reponse><reponse idReponse="2" value="faux">R&#xE9;ponse 2</reponse></question></lesQuestions></qcm><qcm idQCM="3"><nomQcm>S&#xE9;curit&#xE9;</nomQcm><typeDeCours>13</typeDeCours><pseudo>pierreD</pseudo><lesQuestions><question num="1"><question>Faut-il faire des requ&#xEA;tes param&#xE9;tr&#xE9;?</question><reponse idReponse="1" value="vraie">Oui</reponse><reponse idReponse="2" value="faux">non</reponse></question><question num="2"><question>Faut-il savoir si l'utilisateur est sur google chrome pour un aspect de s&#xE9;curit&#xE9;?</question><reponse idReponse="1" value="faux">Oui</reponse><reponse idReponse="2" value="vraie">Non</reponse></question></lesQuestions></qcm><qcm idQCM="4"><nomQcm>mon qcm</nomQcm><typeDeCours>13</typeDeCours><pseudo>clementH</pseudo><lesQuestions><question num="1"><question>La s&#xE9;curit&#xE9;</question><reponse idReponse="1" value="faux">vraie</reponse><reponse idReponse="2" value="faux">faux</reponse><reponse idReponse="3" value="vraie">les deux</reponse></question><question num="2"><question>On veut &#xE7;a</question><reponse idReponse="1" value="faux">Vraie</reponse><reponse idReponse="2" value="vraie">Faux</reponse></question></lesQuestions></qcm></lesQcm>

@@ -105,4 +105,16 @@ class ForumMySQL {
         return $isUpdate;
     }
 
+    function voirUnTypeDeCours($idType){
+        $stmt = $this->laConnexion->getDbh()->prepare("SELECT typeC".
+            " FROM typecours".
+            " WHERE idType = :idType;");
+        $stmt->bindParam(':idType', $idType);
+        $stmt->execute();
+        if ($stmt === false){
+            $this->laConnexion->afficherErreurSQL("Problème lors de la recherche du forum", $stmt);
+        }
+        return $stmt;
+    }
+
 }

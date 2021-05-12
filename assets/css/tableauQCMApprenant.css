@@ -24,9 +24,9 @@ form{
 
 .btCreer{
     border-radius: 30px;
-    border: solid #FF8C00;
+    border: solid darkblue;
     color: white;
-    background-color: #FF8C00;
+    background-color: darkblue;
     padding: 8px 8px 8px 8px;
     font-size: 18px;
     width: 150px;
@@ -41,11 +41,11 @@ select{
     padding: 7px; /* Ajoute un peu d'espace*/
     margin: 0; /* Enlève les espaces par défaut */
     padding-right: 3em; /* accomode la taille avec l'élément d'avant */
-    border: solid #FF8C00;
+    border: solid darkblue;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #FF8C00;
+    background-color: darkblue;
     color: white;
     border-radius: 5px;
 }
@@ -147,45 +147,10 @@ td:last-child{
     border-right: solid 2px #EFEFEF;
 }
 
-/*td:nth-child(2){*/
-/*    width: 165px;*/
-/*}*/
-
-
-/*!* 2, 3 et 4ème td *!*/
-/*td:nth-child(3), td:nth-child(4){*/
-/*    width: 150px;*/
-/*}*/
-
-
-/*!* 2ème th *!*/
-/*th:nth-child(2){*/
-/*    width: 200px;*/
-/*}*/
-
-/*th:nth-child(3){*/
-/*    width: 120px;*/
-/*}*/
-
-/*!* 3ème th *!*/
-/*th:nth-child(4){*/
-/*    width: 175px;*/
-/*}*/
-
-.btModifier, .btSupprimer{
-    border-radius: 30px;
-    background-color: #FF8C00;
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-    border: solid #FF8C00;
-}
-
-.btModifier:hover, .btSupprimer:hover{
-    background-color: white;
-    color: #FF8C00;
+tr:not(.leTrEntete):hover{
     cursor: pointer;
 }
+
 
 /* Pour customiser la scrollbar*/
 

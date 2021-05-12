@@ -54,37 +54,34 @@ function rechercherTousLesQCM2(){
                 '                        <td class="tdForum1">'+nomQcm+'</td>\n' +
                 '                        <td class="tdForum1">'+typeCours+'</td>\n' +
                 '                        <td class="tdForum1">'+pseudo+'</td>\n' +
-                '                        <td class="tdForum1"><input type="button" id="'+idQCM+'" class="btModifier" value="Modifier"></td>\n' +
-                '                        <td class="tdForum1"><input type="button" id="'+idQCM+'" class="btSupprimer" value="Supprimer"></td>\n' +
                 '                    </tr>'
         }
         leTbody.append(result);
-        changerTypeDeCours(json.lesQCM.qcm.length);
+        $("tr.trBody").on("mouseover", function(){
+            $(this).css({
+                "background-color" : "#3782c8", //Change la couleur d'arrière en bleue
+                "cursor" : "pointer" //Change l'aspect du pointeur
+            });
+            $(this).children().css({ //les td correspondant au tr
+                "color" : "white" //Change la couleur du texte en blanc
+            });
+        }).on("mouseleave", function (){
+            $(this).css({
+                "background-color" : "white", //Change la couleur d'arrière en blanc
+            });
+            $(this).children().css({
+                "color" : "#3782c8" //Change la couleur du texte en blanc
+            });
+        }).on("click", function () {
+            var id = $(this).attr('id');
+            url = '../_controllers/afficherUnForum.php?idForum='+id;
+            window.location.href = url;
+        });
     });
 }
 
 
 
-
-function changerTypeDeCours(nbrQCM) {
-    for (var i = 0; i < nbrQCM; i++){
-        $.ajax({
-            url: '../_functions/rechercherUnTypeDeCours.php',
-            type: 'POST', dataType: 'html',
-            success: function (code_html, statut) {
-                console.log(i);
-            }
-        });
-
-    }
-    // $.ajax({
-    //     url: '../_functions/rechercherUnTypeDeCours.php',
-    //     type: 'POST', dataType: 'html',
-    //     success: function (code_html, statut) {
-    //         console.log(i);
-    //     }
-    // });
-}
 
 
 $(document).ready(function() {
@@ -92,13 +89,13 @@ $(document).ready(function() {
         //Lorsque le pointeur de la souris est sur le bouton
         $(this).css({
             "background-color": "white", //Change la couleur d'arrière en blanc
-            "color": "#FF8C00", //Change la couleur du texte en orange foncé
+            "color": "darkblue", //Change la couleur du texte en orange foncé
             "cursor": "pointer" //Change l'aspect du pointeur
         });
     }).on("mouseleave", function () {
         //Lorsque le pointeur de la souris n'est plus sur le bouton
         $(this).css({
-            "background-color": "#FF8C00", //Change la couleur d'arrière en blanc
+            "background-color": "darkblue", //Change la couleur d'arrière en blanc
             "color": "white", //Change la couleur du texte en orange foncé
         });
     }).on("click", function () {
