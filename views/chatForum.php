@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page chat forum</title>
-    <link rel="stylesheet" href="../assets/css/chatForum.css"/>
-</head>
 <?php
-session_start();
+$title = "Page chat forum";
+$linkCSS = "chatForum";
+include("../_scripts/enteteApprenant.php");
+
 if(isset($_SESSION['leForum'])){
     $leForum = $_SESSION['leForum'];
     $idForum = $leForum[0];
@@ -35,7 +32,7 @@ if(isset($_SESSION['leForum'])){
 
 
         <div class="chat">
-            <div class="lesMessages">
+            <div class="lesMessages" id="lesMessages">
                 <div class="blockMessageAutre">
                     <div class="contenneurMessage">
                     <span class="contennueMessageAutre">
@@ -104,7 +101,7 @@ if(isset($_SESSION['leForum'])){
                 <form>
                     <div class="contenneurForm">
                         <div class="contennueMessage">
-                            <textarea name="reponse" class="reponse" placeholder="Votre message" rows="5" ></textarea>
+                            <textarea name="reponse" class="reponse" placeholder="Votre message" rows="4" ></textarea>
                         </div>
                         <div class="contennueBtEnvoyer">
                             <input type="button" value="Envoyer 🔥" class="btEnvoyer" id="btEnvoyer"/>
@@ -119,6 +116,7 @@ if(isset($_SESSION['leForum'])){
     <script src="../assets/js/chatForum.js"></script>
 </body>
 <?php
+    include("../_scripts/footer.php");
 }else{
     echo "Erreur de récupération des données";
 }

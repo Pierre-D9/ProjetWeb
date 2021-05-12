@@ -20,4 +20,4 @@ include("../_scripts/enteteAdmin.php");
 
 
 
-<?php include("../_scripts/footerAdmin.php"); ?>
+<?php include("../_scripts/footer.php"); ?>

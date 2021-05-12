@@ -50,4 +50,4 @@ include("../_scripts/enteteAdmin.php");
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/ajouterUtilisateur.js"></script>
 
-<?php include("../_scripts/footerAdmin.php"); ?>
+<?php include("../_scripts/footer.php"); ?>

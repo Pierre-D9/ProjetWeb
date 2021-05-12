@@ -19,16 +19,41 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: #6e3300;
-    padding: 20px;
+    padding: 20px 20px 7px 20px;
 }
 .nomEtDeco{
     color: white;
     padding-top: 7px;
 }
 
-.logo{
+.logoo{
     height: 40px;
     width: 200px;
+}
+
+.logoo:hover{
+    cursor: pointer;
+}
+
+.navigationHeader{
+    display: flex;
+}
+
+.voirCours, .voirQCM, .voirForum{
+    border-radius: 30px;
+    background-color: darkblue;
+    border: solid darkblue;
+    margin-top: 0;
+    margin-left: 20px;
+    color: white;
+    padding: 10px;
+    font-size: 19px;
+}
+
+.voirCours:hover, .voirQCM:hover, .voirForum:hover{
+    background-color: white;
+    color: darkblue;
+    cursor: pointer;
 }
 
 .btDeconnexion{

@@ -14,6 +14,8 @@ $(document).ready(function(){
             "background-color" : "#FF8C00", //Change la couleur d'arrière en blanc
             "color" : "white", //Change la couleur du texte en orange foncé
         });
+    }).on("click", function () {
+        window.location.href = 'tableauQCM.php';
     });
 
 

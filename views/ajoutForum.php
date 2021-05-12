@@ -5,8 +5,11 @@
     <link rel="stylesheet" href="../assets/css/ajoutForum.css"/>
 </head>
 <body>
-
 <?php
+$title = "Page ajouter un forum";
+$linkCSS = "ajoutForum";
+include("../_scripts/enteteApprenant.php");
+
 $lesTypesDeCours = array();
 include_once('../_controllers/chargementClasses.php');
 
@@ -57,5 +60,7 @@ while($row = $rs->fetch()) {
     </div>
     <script src="../assets/js/jquery-3.5.1.min.js"></script>
     <script src="../assets/js/ajoutForum.js"></script>
-</body>
-</html>
+
+<?php
+    include("../_scripts/footer.php");
+?>

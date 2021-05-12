@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page forum</title>
-    <link rel="stylesheet" href="../assets/css/tableauForum.css" />
-</head>
-<body>
 <?php
+$title = "Page forum";
+$linkCSS = "tableauForum";
+include("../_scripts/enteteApprenant.php");
+
 $lesTypesDeCours = array();
 
 include_once('../_controllers/chargementClasses.php');
@@ -107,13 +104,13 @@ while($row = $rs->fetch()) {
         </div>
 </div>
 
-<div class="test">
-
-</div>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <!-- Les scripts js -->
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/tableauForum.js"></script>
 
-</body>
-</html>
+<?php include("../_scripts/footer.php") ?>

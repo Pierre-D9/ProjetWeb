@@ -13,4 +13,4 @@
     </body>
 </html>
 
-<script src="../assets/js/enteteAdmin.js"></script>
+<script src="../assets/js/entete.js"></script>

@@ -88,5 +88,5 @@ include("../_scripts/enteteAdmin.php");
 <script src="../assets/js/tableauUtilisateur.js"></script>
 
 </body>
-<?php include("../_scripts/footerAdmin.php"); ?>
+<?php include("../_scripts/footer.php"); ?>
 </html>

@@ -52,5 +52,5 @@ $mail = $tabInfoUtil[3];
 <script src="../assets/js/ajouterUtilisateur.js"></script>
 
 
-<?php include("../_scripts/footerAdmin.php"); ?>
+<?php include("../_scripts/footer.php"); ?>
 

@@ -5,7 +5,7 @@ body{
 h1{
     text-align: center;
     font-size: 60px;
-    color: green;
+    color: black;
 }
 
 .contenneur{
@@ -24,9 +24,9 @@ form{
 
 .btCreer{
     border-radius: 30px;
-    border: solid #FF8C00;
+    border: solid darkblue;
     color: white;
-    background-color: #FF8C00;
+    background-color: darkblue;
     padding: 8px 8px 8px 8px;
     font-size: 18px;
     width: 150px;
@@ -41,11 +41,11 @@ select{
     padding: 7px; /* Ajoute un peu d'espace*/
     margin: 0; /* Enlève les espaces par défaut */
     padding-right: 3em; /* accomode la taille avec l'élément d'avant */
-    border: solid #FF8C00;
+    border: solid darkblue;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: #FF8C00;
+    background-color: darkblue;
     color: white;
     border-radius: 5px;
 }

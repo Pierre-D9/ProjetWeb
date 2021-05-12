@@ -51,7 +51,7 @@ $(document).ready(function() {
             "color": "white", //Change la couleur du texte en orange foncé
         });
     }).on("click", function () {
-        window.location.href = 'ajoutForum.php';
+        window.location.href = 'ajoutQCM.php';
     });
 
 });

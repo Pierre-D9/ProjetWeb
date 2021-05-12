@@ -1,5 +1,5 @@
 rechercherLesReponses();
-const interval = window.setInterval(rechercherLesReponses, 10000);
+const interval = window.setInterval(rechercherLesReponses, 5000);
 
 function rechercherLesReponses() {
     var idForum = $('h2').attr('id');
@@ -53,8 +53,7 @@ function afficherLesReponses(vous, json){
 
         }
         blocMessage.append(result);
-        var test = blocMessage.scrollTop = blocMessage.scrollHeight;
-        var test = $('div.lesMessages').scrollTop = $('div.lesMessages').scrollHeight;
+        var laScroll = setTimeout(gererLaScrollBar(), 5000);
     }
 
     var i = 0;
@@ -87,6 +86,8 @@ function afficherLesReponses(vous, json){
         }
         i = 0;
     });
+
+
 }
 
 function insererUneReponse(){
@@ -113,6 +114,11 @@ function insererUneReponse(){
     });
 
 }
+
+function gererLaScrollBar(){
+    document.getElementById('lesMessages').scrollTop = document.getElementById('lesMessages').scrollHeight;
+}
+
 
 
 

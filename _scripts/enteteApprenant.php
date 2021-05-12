@@ -1,14 +1,14 @@
 <?php
-session_start();
-if(!isset($_SESSION['pseudo'])){
-    header("location:../_controllers/deconnexion.php");
-}
-if(!isset($title) || !isset($linkCSS)){
-    $title = "Titre";
-    $linkCSS = "test";
-}
-$linkCSS = "../assets/css/".$linkCSS.".css";
-$nomPrenom = $_SESSION['nomPrenom'];
+    session_start();
+    if(!isset($_SESSION['pseudo'])){
+        header("location:../_controllers/deconnexion.php");
+    }
+    if(!isset($title) || !isset($linkCSS)){
+        $title = "Titre";
+        $linkCSS = "test";
+    }
+    $linkCSS = "../assets/css/".$linkCSS.".css";
+    $nomPrenom = $_SESSION['nomPrenom'];
 ?>
 <html>
 <head>
@@ -21,8 +21,13 @@ $nomPrenom = $_SESSION['nomPrenom'];
 <body>
 <div class="header">
     <div class="Titre">
-        <img src="../assets/Image/WearleonlyColor.png" class="logo">
+        <img src="../assets/Image/WearleonlyColor.png" class="logoo">
     </div>
+    <nav class="navigationHeader">
+        <p class="voirCours">Voir les cours</p>
+        <p class="voirQCM">Voir les QCM</p>
+        <p class="voirForum">Forum</p>
+    </nav>
     <div class="nomEtDeco">
         <p class="nomAdmin"><?php echo $nomPrenom; ?></p>
         <span class="btDeconnexion"><i class="fas fa-power-off" style="transform: scale(2);"></i></span>

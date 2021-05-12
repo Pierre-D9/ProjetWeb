@@ -23,7 +23,7 @@ while($row = $rs->fetch()) {
 
 <div class="contenneur">
     <form>
-        <div class ="ajouterUnCours">
+        <div class ="ajouterUnQCM">
            <input type="button" class="btCreer" value="Créer un QCM" />
         </div>
         <div class="choixTypeCours">

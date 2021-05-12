@@ -46,4 +46,4 @@ while($row = $rs->fetch()) {
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/homeApprenant.js"></script>
 
-<?php include("../_scripts/footerAdmin.php"); ?>
+<?php include("../_scripts/footer.php"); ?>
