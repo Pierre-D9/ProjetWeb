@@ -2,19 +2,17 @@
 
 include_once('chargementClasses.php');
 
-
+$pseudo = $_POST['pseudo'];
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
 
-$UtilisateurMySQL = new UtilisateurMySQL ();
+$UtilisateurMySQL = new UtilisateurMySQL();
 
-$UtiliId = $UtilisateurMySQL->ModifierUtilisateur($nom, $prenom, $mail);
+$UtilisateurMySQL->ModifierUtilisateur($pseudo, $nom, $prenom, $mail);
 
-if ($UtiliId != 0) {
-    header('location:../_controllers/afficherUnUtilisateur.php>' . $UtiliId);
-    echo "<br/>l'utilisateur  a été modifier  <br/>";
-}
+header('location:../views/tableauUtilisateur.php');
+
 ?>
 
 

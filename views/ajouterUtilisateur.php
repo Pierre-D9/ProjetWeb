@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page utilisateurs </title>
-    <link rel="stylesheet" href="../assets/css/ajouterUtilisateur.css"/>
-</head>
-<body>
 <?php
-include_once('../_controllers/chargementClasses.php');
+$title = "Page utilisateurs";
+$linkCSS = "ajouterUtilisateur";
+include("../_scripts/enteteAdmin.php");
 
 ?>
 <div class="contenneurTitre">
@@ -55,5 +50,4 @@ include_once('../_controllers/chargementClasses.php');
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/ajouterUtilisateur.js"></script>
 
-</body>
-</html>
+<?php include("../_scripts/footerAdmin.php"); ?>

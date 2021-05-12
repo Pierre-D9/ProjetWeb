@@ -3,9 +3,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <!-- <title>Login & Signup Form</title> -->
-    <link rel="stylesheet" href="../assets/css/connexion.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Page de connexion</title>
+      <link rel="stylesheet" href="../assets/css/connexion.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" sizes="16*16" href="../assets/Image/WonlyColorV2.ico">
   </head>
   <body>
   <div class="wrapper">
@@ -42,21 +43,21 @@
                   <div class="signup-link">
                       Pas encore inscrit? <a href=""> Inscription</a></div>
               </form>
-              <form action="#" class="signup">
+              <form action="../_controllers/inscription.php" class="signup" method="post">
                   <div class="field">
-                      <input type="text" placeholder="Prénom" required>
+                      <input type="text" placeholder="Prénom" name="prenom" required>
                   </div>
                   <div class="field">
-                      <input type="text" placeholder="Nom" required>
+                      <input type="text" placeholder="Nom" name="nom" required>
                   </div>
                   <div class="field">
-                      <input type="text" placeholder="Pseudo" required>
+                      <input type="text" placeholder="Pseudo" name="pseudo" required>
                   </div>
                   <div class="field">
-                      <input type="email" placeholder="Adresse-mail" required>
+                      <input type="email" placeholder="Adresse-mail" name="mail" required>
                   </div>
                   <div class="field">
-                      <input type="password" placeholder="Mot-de-passe" required>
+                      <input type="password" placeholder="Mot-de-passe" name="password" required>
                   </div>
 
                   <div class="field btn">

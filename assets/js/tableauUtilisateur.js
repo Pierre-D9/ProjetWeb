@@ -22,7 +22,13 @@ $(document).ready(function(){
             }).on("click", function() {
                 var pseudo = $(this).attr('id');
                 if (confirm("Voulez-vous vraiment supprimer cette utilisateur : "+pseudo + " ?")){
-                    console.log(pseudo);
+                    $.post(
+                        '../_controllers/supprimerUnUtilisateur.php', // Le fichier cible côté serveur.
+                        {
+                            pseudo : pseudo
+                        }
+                    );
+                    rechercherTousLesUtilisateurs();
                 }else{
                     console.log('pas nice');
                 }

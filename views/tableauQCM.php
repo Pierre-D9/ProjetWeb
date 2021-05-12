@@ -24,7 +24,7 @@ while($row = $rs->fetch()) {
 <div class="contenneur">
     <form>
         <div class ="ajouterUnCours">
-           <input type="button" class="btCreer" value="Créer un forum" />
+           <input type="button" class="btCreer" value="Créer un QCM" />
         </div>
         <div class="choixTypeCours">
             <span class="listeDeroulante listeDeroulante-barre">

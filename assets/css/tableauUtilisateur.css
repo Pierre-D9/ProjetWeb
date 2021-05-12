@@ -19,8 +19,8 @@ form{
 }
 
 .ajouterUnUtilis{
-    padding: 8px 4px 8px 30px;
-    width: 900px
+    padding-left: 15px;
+    width: 900px;
 }
 
 .btAjouter{
@@ -31,7 +31,6 @@ form{
     padding: 8px 8px 8px 8px;
     font-size: 15px;
     width: 200px;
-    float: right;
 }
 
 .btM{
@@ -58,29 +57,8 @@ form{
 
 
 
-
-select{
-    font-size: 18px;
-    padding: 7px; /* Ajoute un peu d'espace*/
-    margin: 0; /* Enlève les espaces par défaut */
-    padding-right: 3em; /* accomode la taille avec l'élément d'avant */
-    border: solid #FF8C00;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: #FF8C00;
-    color: white;
-    border-radius: 5px;
-}
-
-select:focus{
-    outline: none;
-}
-
-
-
 .leTableau{
-    margin-top: 90px;
+    margin-top: 20px;
     width:90%;
 }
 
@@ -89,8 +67,6 @@ table{
     table-layout: fixed;
     text-align: center;
     border-collapse: collapse;
-
-
 }
 
 .enteteTableau{
@@ -98,7 +74,7 @@ table{
 }
 
 .bodyTableau{
-    height:350px;
+    max-height:350px;
     overflow-x:auto;
     margin-top: 0;
     background-color: #E8F1FE;

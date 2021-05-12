@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page forum</title>
-    <link rel="stylesheet" href="../assets/css/homeApprenant.css" />
-    <link rel="icon" type="image/png" sizes="16*16" href="../assets/Image/WonlyColorV2.ico">
-</head>
-<body>
 <?php
+$title = "Page Home";
+$linkCSS = "homeApprenant";
+include("../_scripts/enteteApprenant.php");
+
 $lesTypesDeCours = array();
 
 include_once('../_controllers/chargementClasses.php');
@@ -42,9 +38,7 @@ while($row = $rs->fetch()) {
     </form>
 </div>
 <div class="lesCours">
-    <div class="unCours">
-
-    </div>
+    <h1>PARTIE COURS</h1>
 </div>
 
 
@@ -52,5 +46,4 @@ while($row = $rs->fetch()) {
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 <script src="../assets/js/homeApprenant.js"></script>
 
-</body>
-</html>
+<?php include("../_scripts/footerAdmin.php"); ?>

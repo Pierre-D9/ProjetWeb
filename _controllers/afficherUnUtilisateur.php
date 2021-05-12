@@ -13,16 +13,14 @@ $rs = $UtilisateurMySQL->afficherUnUtilisateur($pseudo);
 
 //Remplissage dans un tableau, un tableau sous forme de clé valeur pour chaque forum
 $lesutil = $rs->fetch();
-$pseudo = $lesutil[0];
-$password = $lesutil[1];
-$nom = $lesutil[2];
-$prenom = $lesutil[3];
-$mail = $lesutil[4];
-$typeUtil = $lesutil[5];
+$pseudo = $lesutil["pseudo"];
+$nom = $lesutil["nom"];
+$prenom = $lesutil["prenom"];
+$mail = $lesutil["mail"];
 
 //Forum envoyé en session
 
-$utilEnvoye = array($pseudo,$password, $nom,$prenom , $mail , $typeUtil );
+$utilEnvoye = array($pseudo,$nom,$prenom,$mail);
 
 //On ouvre la session
 session_start();
@@ -33,5 +31,5 @@ $_SESSION['utilAEnvoyer'] = $utilEnvoye;
 
 print_r($utilEnvoye);
 
-//header('location:../views/ajouterUtilisateur.php');
+header('location:../views/modifierUtilisateur.php');
 ?>

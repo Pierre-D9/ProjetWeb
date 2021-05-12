@@ -50,7 +50,7 @@ class UtilisateurMySQL
         return $stmt;
     }
 
-    function ModifierUtilisateur($nom, $prenom, $mail)
+    function ModifierUtilisateur($pseudo, $nom, $prenom, $mail)
     {
         $Modified = false;
         $dernierId=0;
@@ -63,6 +63,7 @@ class UtilisateurMySQL
         $stmt->bindParam(':nom', $nom);
         $stmt->bindParam(':prenom', $prenom);
         $stmt->bindParam(':mail', $mail);
+        $stmt->bindParam(':pseudo', $pseudo);
 
         if($stmt->execute()) {
             echo "edité";

@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Page utilisateurs </title>
-    <link rel="stylesheet" href="../assets/css/tableauUtilisateur.css" />
-</head>
+<?php
+$title = "Page utilisateurs";
+$linkCSS = "tableauUtilisateur";
+include("../_scripts/enteteAdmin.php");
+
+?>
 <body>
 <div class="contenneurTitre">
     <h1>Les utilisateurs </h1>
 </div>
 
 <div class="contenneur">
-    <form>
-        <div class ="ajouterUnUtilis">
-            <input type="button" class="btAjouter" value="Ajouter un utilisateur" />
-        </div>
+    <div class ="ajouterUnUtilis">
+        <input type="button" class="btAjouter" value="Ajouter un utilisateur" />
+    </div>
 
-
-    </form>
     <div class="leTableau">
         <div class="enteteTableau">
             <table>
@@ -91,4 +88,5 @@
 <script src="../assets/js/tableauUtilisateur.js"></script>
 
 </body>
+<?php include("../_scripts/footerAdmin.php"); ?>
 </html>

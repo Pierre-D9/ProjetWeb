@@ -14,7 +14,7 @@ if(isset($_SESSION['leForum'])){
     $dateF = $leForum[3];
     $createur = $leForum[4];
     $idTypeCours = $leForum[5];
-    $vous = "FarahB";
+    $vous = $_SESSION['pseudo'];
 
 ?>
 <body>
